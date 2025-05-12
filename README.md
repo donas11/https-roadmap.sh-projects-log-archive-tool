@@ -11,7 +11,7 @@ The tool should run from the command line, accept the log directory as an argume
 
 Provide the log directory as an argument when running the tool.
 
-´´´log-archive <log-directory>
+´´´log-archive log-directory
 ´´´
 The tool should compress the logs in a tar.gz file and store them in a new directory.
 The tool should log the date and time of the archive to a file.
