@@ -31,8 +31,10 @@ If you are looking to build a more advanced version of this project, you can con
 Create a New App password
 
 
-`bash config-email.sh correoenvio@gmail.com --ask`
-`> New_App_password`
+```
+bash config-email.sh correoenvio@gmail.com --ask
+> New_App_password
+```
 
 `bash send-logs-email.sh "Receptor@gmail.com" "Logs Compresed" "Adjunto Logs Comprimidos" "./compresed_logs/log-archive_date.tar.gz"`
 
@@ -43,5 +45,7 @@ Create a New App password
 `rclone config`
 
 
-`cd /compresed_logs`
-`rclone copy ./ logsdrive: --include "*.tar.gz"`
+```
+cd /compresed_logs
+rclone copy ./ logsdrive: --include "*.tar.gz"
+```
