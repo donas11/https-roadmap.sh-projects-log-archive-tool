@@ -32,7 +32,7 @@ Create a New App password
 
 ´´´
 bash config-email.sh correoenvio@gmail.com --ask
-> New_App_password
+(input) New_App_password
 ´´´
 
 `bash send-logs-email.sh "Receptor@gmail.com" "Logs Compresed" "Adjunto Logs Comprimidos" "./compresed_logs/log-archive_date.tar.gz"`
