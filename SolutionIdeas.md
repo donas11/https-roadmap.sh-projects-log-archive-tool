@@ -1,5 +1,5 @@
 Provide the log directory as an argument when running the tool.
-´´´log-archive <log-directory>´´´
+´´´ log-archive <log-directory> ´´´
 The tool should compress the logs in a tar.gz file and store them in a new directory.
 The tool should log the date and time of the archive to a file.
 
@@ -34,7 +34,7 @@ If you are looking to build a more advanced version of this project, you can con
 
 
 # sending the archive to email  
-* configurate postfix for send emails from your system with gmail **config-email.sh**
+## configurate postfix for send emails from your system with gmail **config-email.sh**
 ´´´
 #!/bin/bash
 
@@ -105,7 +105,7 @@ bash config-email.sh correoenvio@gmail.com --ask
 ´´´
 
 
-* Send mail with the file **send-email.sh**
+## Send mail with the file **send-email.sh**
 
 ´´´
 #!/bin/bash
@@ -128,13 +128,14 @@ echo "$CUERPO" | mutt -s "$ASUNTO" -a "$ADJUNTO" -- "$DESTINATARIO"
 ´´´
 bash send-email.sh "Receptor@gmail.com" "Logs Comprimidos" "Adjunto Logs Comprimidos" "./compresed_logs/log-archive_2025-05-10_23-13-14.tar.gz"
 ´´´
+
 ![Comprobación de recepción de email](/imgs/email.png)
 
 
 If you are looking to build a more advanced version of this project, you can consider adding functionality to the tool like emailing the user updates on the archive, or **sending the archive to a remote server or cloud storage**.
 
 
-´´'
+´´´
 curl https://rclone.org/install.sh | sudo bash
 ´´´
 
