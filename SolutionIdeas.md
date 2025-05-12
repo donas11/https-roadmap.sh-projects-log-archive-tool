@@ -1,11 +1,11 @@
 Provide the log directory as an argument when running the tool.
-´´´ log-archive <log-directory> ´´´
+`log-archive log-directory`
 The tool should compress the logs in a tar.gz file and store them in a new directory.
 The tool should log the date and time of the archive to a file.
 
 
 # log-archive.sh
-´´´
+```
 #!/bin/sh
 
 if [ -d "$1" ]; then
@@ -28,14 +28,14 @@ else
     exit 1
 fi
 
-´´´
+```
 
 If you are looking to build a more advanced version of this project, you can consider adding functionality to the tool like ** emailing the user updates on the archive **, or sending the archive to a remote server or cloud storage.
 
 
 # sending the archive to email  
 ## configurate postfix for send emails from your system with gmail **config-email.sh**
-´´´
+```
 #!/bin/bash
 
 # check the arguments
@@ -94,20 +94,20 @@ service postfix restart
 
 echo "Configuration Complet."
 echo "----------------------------"
-´´´
+```
 
 
 Hay que Crear y utilizar contraseñas de aplicación
 
-´´´
+```
 bash config-email.sh correoenvio@gmail.com --ask
 > contraseñas_de_aplicación
-´´´
+```
 
 
 ## Send mail with the file **send-email.sh**
 
-´´´
+```
 #!/bin/bash
 
 DESTINATARIO="$1"
@@ -123,11 +123,11 @@ fi
 
 # Enviar correo con adjunto
 echo "$CUERPO" | mutt -s "$ASUNTO" -a "$ADJUNTO" -- "$DESTINATARIO"
-´´´
+```
 
-´´´
+```
 bash send-email.sh "Receptor@gmail.com" "Logs Comprimidos" "Adjunto Logs Comprimidos" "./compresed_logs/log-archive_2025-05-10_23-13-14.tar.gz"
-´´´
+```
 
 ![Comprobación de recepción de email](/imgs/email.png)
 
@@ -135,15 +135,15 @@ bash send-email.sh "Receptor@gmail.com" "Logs Comprimidos" "Adjunto Logs Comprim
 If you are looking to build a more advanced version of this project, you can consider adding functionality to the tool like emailing the user updates on the archive, or **sending the archive to a remote server or cloud storage**.
 
 
-´´´
+```
 curl https://rclone.org/install.sh | sudo bash
-´´´
+```
 
-´´´
+```
 rclone config
-´´´
+```
 
-´´´
+```
 Enter name for new remote.
 name> 
 > logsdrive
@@ -212,11 +212,11 @@ root_folder_id>
 
 de la carpeta compartida con cuenta de servicio
 Seleccionamos la parte https://drive.google.com/drive/u/1/folders/Referencia_ID
-´´´
+```
 
 Podemos enviar todos los archivos comprimidos así:
-´´´
+```
 rclone copy ./ logsdrive: --include "*.tar.gz"
-´´´
+```
 ![Comprobación de respaldo de archivos de logs](/imgs/GDrive.png)
 
