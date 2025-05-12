@@ -10,10 +10,14 @@ The most common location for logs on a unix based system is ´´´/var/log´´´
 The tool should run from the command line, accept the log directory as an argument, compress the logs, and store them in a new directory. The user should be able to:
 
 Provide the log directory as an argument when running the tool.
-´´´log-archive <log-directory>´´´
+´´´
+log-archive <log-directory>
+´´´
 The tool should compress the logs in a tar.gz file and store them in a new directory.
 The tool should log the date and time of the archive to a file.
-´´´logs_archive_20240816_100648.tar.gz´´´
+´´´
+logs_archive_20240816_100648.tar.gz
+´´´
 You can learn more about the tar command [here.](https://www.gnu.org/software/tar/manual/tar.html)
 
 If you are looking to build a more advanced version of this project, you can consider adding functionality to the tool like emailing the user updates on the archive, or sending the archive to a remote server or cloud storage.
@@ -22,7 +26,7 @@ If you are looking to build a more advanced version of this project, you can con
 #  How to run
 
 ´´´
-bash log-archive <name-directory-with-logs>
+bash log-archive name-directory-with-logs
 ´´´
 
 ## Copy to Google email
@@ -38,7 +42,7 @@ bash send-logs-email.sh "Receptor@gmail.com" "Logs Compresed" "Adjunto Logs Comp
 
 ## Copy all compresed files to GDrive
 
-´´'
+´´´
 curl https://rclone.org/install.sh | sudo bash
 ´´´
 
