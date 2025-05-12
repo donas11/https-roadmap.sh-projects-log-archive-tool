@@ -25,10 +25,10 @@ If you are looking to build a more advanced version of this project, you can con
 
 #  How to run
 
-`bash log-archive name-directory-with-logs`
+```bash log-archive name-directory-with-logs```
 
 ## Copy to Google email
-Create a New App password
+Create a `New App password`
 
 
 ```
@@ -36,13 +36,13 @@ bash config-email.sh correoenvio@gmail.com --ask
 > New_App_password
 ```
 
-`bash send-logs-email.sh "Receptor@gmail.com" "Logs Compresed" "Adjunto Logs Comprimidos" "./compresed_logs/log-archive_date.tar.gz"`
+```bash send-logs-email.sh "Receptor@gmail.com" "Logs Compresed" "Adjunto Logs Comprimidos" "./compresed_logs/log-archive_date.tar.gz"```
 
 ## Copy all compresed files to GDrive
 
-`curl https://rclone.org/install.sh | sudo bash`
+```curl https://rclone.org/install.sh | sudo bash```
 
-`rclone config`
+```rclone config```
 
 
 ```
